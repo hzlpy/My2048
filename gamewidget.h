@@ -2,7 +2,10 @@
 #define GAMEWIDGET_H
 
 #include <QWidget>
-
+#include <QVBoxLayout>
+#include <QLabel>
+#include <QPushButton>
+#include <QFont>
 class GameWidget : public QWidget
 {
     Q_OBJECT
@@ -11,6 +14,15 @@ public:
 
 signals:
 
+private:
+    QWidget *topWidget;
+    QWidget *mainWidget;
+    QVBoxLayout *vBoxLayout;
+    QLabel *scoreLabel;
+    QLabel *highScoreLabel;
+    QPushButton *restartButton;
+    QFont font;
+    void init();
 public slots:
 
 };
